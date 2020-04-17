@@ -657,7 +657,7 @@ static int smart_amp_prepare(struct comp_dev *dev)
 	sad->in_channels = sad->source_buf->stream.channels;
 	sad->out_channels = sad->sink_buf->stream.channels;
 
-	sad->feedback_buf->stream.channels = 8;
+	sad->feedback_buf->stream.channels = sad->config.feedback_channels;
 	sad->feedback_buf->stream.frame_fmt = 2;
 
 	return 0;
